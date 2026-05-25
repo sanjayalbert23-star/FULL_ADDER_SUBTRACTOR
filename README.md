@@ -41,7 +41,14 @@ Borrow out = A'Bin + A'B + BBin
 **Procedure**
 
 Write the detailed procedure here
-
+1.Open Quartus Prime software and create a new project.
+2.Select the target device and create a Verilog HDL file.
+3.Write the Verilog code for Full Adder and Full Subtractor circuits.
+4.Compile the program and correct any syntax errors.
+5.Generate the RTL schematic and verify the logic design.
+6.Create the input waveform and simulate the circuit.
+Verify the output timing waveform with the truth table.
+## Full Adder
 **Program:**
 
 /* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by:SANJAY A
@@ -64,6 +71,33 @@ endmodule
 
 **Output Timing Waveform**
 <img width="1043" height="595" alt="Screenshot 2026-05-25 201621" src="https://github.com/user-attachments/assets/b8e02131-d65e-481c-a3f3-0d92297fdba7" />
+
+
+## Full Subtractor
+**Program:**
+
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by:SANJAY A
+RegisterNumber:212225040367
+*/
+```
+module full_subtractor(diff, borrow, a, b, bin);
+    output diff;
+    output borrow;
+    input a;
+    input b;
+    input bin;
+
+    assign diff = a ^ b ^ bin;
+    assign borrow = (a & b) | ((a ^ b) & bin);
+endmodule
+```
+**RTL Schematic**
+<img width="753" height="278" alt="Screenshot 2026-05-25 202247" src="https://github.com/user-attachments/assets/bd8ddf32-44c6-4d18-9695-49672e4a8aea" />
+
+
+**Output Timing Waveform**
+<img width="1058" height="590" alt="Screenshot 2026-05-25 202317" src="https://github.com/user-attachments/assets/1b9c94c1-a615-49f5-9ca7-8384c239dc92" />
+
 
 **Result:**
 
